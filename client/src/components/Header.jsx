@@ -28,28 +28,28 @@ const Header = () => {
                 <FaMoon />
             </Button>
             <Link to='/sign-in'>
-                <Button gradientDuoTone='purpleToBlue'>
+                <Button gradientDuoTone='purpleToBlue' outline>
                     Sign In
                 </Button>
             </Link>
             <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
-                <Navbar.Link href="/" active={path === "/"} as={'div'}>
-                    <Link to='/'>
-                        Home
-                    </Link>
-                </Navbar.Link>
-                <Navbar.Link href="/about" active={path === "/about"} as={'div'}>
-                    <Link to='/about'>
-                        About
-                    </Link>
-                </Navbar.Link>
-                <Navbar.Link href="/projects" active={path === "/projects"} as={'div'}>
-                    <Link to='/projects'>
-                        Projects
-                    </Link>
-                </Navbar.Link>
+            <Navbar.Link as="div" active={path === '/'}>
+          <Link to="/" className="w-full h-full block">
+            Home
+          </Link>
+        </Navbar.Link>
+        <Navbar.Link as="div" active={path === '/about'}>
+          <Link to="/about" className="w-full h-full block">
+            About
+          </Link>
+        </Navbar.Link>
+        <Navbar.Link as="div" active={path === '/projects'}>
+          <Link to="/projects" className="w-full h-full block">
+            Projects
+          </Link>
+        </Navbar.Link>
             </Navbar.Collapse>
         
     </Navbar>
